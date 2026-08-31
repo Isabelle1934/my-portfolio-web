@@ -1,133 +1,33 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
-    <!-- Configurações básicas do html -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Isabelle Fernanda | Portfólio</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Engr.Isabelle</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
-
   <body>
-    <header>
-      <nav>
-        <h2 class="logo">Isabelle.engr</h2>
-
-        <!-- Menu principal -->
-        <ul id="menu">
-          <li><a href="#sobre">Sobre mim</a></li>
-          <li><a href="#formacao">Formação</a></li>
-          <li><a href="#portfolio">Portfólio</a></li>
-          <li><a href="#contato">Contato</a></li>
-        </ul>
-
-        <!-- Botão de tema -->
-        <button id="tema">🌙</button>
-      </nav>
-    </header>
-
-    <main>
-      <section id="sobre">
-        <h1>Hello! I am Isabelle</h1>
-
-        <p>
-          Sou estudante de Engenharia de Software com foco em
-          Inteligência Artificial, Machine Learning e desenvolvimento de soluções inteligentes.
-          Profissional comunicativa, pontual e focada, com facilidade para
-          trabalhar em equipe e liderar quando necessário. Possuo senso de responsabilidade, sou proativa,
-          organizada e tenho agilidade na execução de tarefas. Gosto de aprender, sou observadora e empática,
-          o que me permite planejar com atenção aos detalhes e me adaptar com facilidade aos desafios do dia a dia.
-          Estou sempre disposta a contribuir com o crescimento da equipe e da empresa.
-        </p>
-
-        <p>
-          Tenho interesse em criar tecnologias que resolvam problemas
-          reais através da programação, automação e IA.
-        </p>
-
-        <h2 class="titulo-hobbies">Hobbies</h2>
-
-        <p>
-          Gosto de estudar tecnologia, desenvolver projetos pessoais,
-          aprender novos idiomas, ler e buscar evolução constante.
-        </p>
-      </section>
-
-      <section id="formacao">
-        <h2>Formação</h2>
-
-        <div class="card">
-          <h3>Engenharia de Software</h3>
-          <p>
-            Graduação em andamento no Centro Universitário Internacional (Uninter)
+    <section class="hero" aria-label="Banner inicial">
+      <div class="hero-overlay">
+        <div class="hero-content">
+          <p class="eyebrow"></p>
+          <h1>Hi, I'm Isabelle</h1>
+          <p class="role">Backend Developer &amp; Tech Creator</p>
+          <p class="description">
+            Backend Developer &amp; Tech Content Creator. Building modern web
+            experiences and sharing my journey with the dev community.
           </p>
         </div>
+      </div>
+    </section>
 
-        <div class="card">
-          <h3>Cursos complementares</h3>
-          <p>
-            • Python for everybody - University of Michigan<br>
-            • CS50x - Harvard<br>
-            • English for Career Development - University of Pennsylvania<br>
-          </p>
-        </div>
+    <script>
+      const root = document.body;
 
-        <div class="card">
-          <h3>Idiomas</h3>
-          <p>
-            Português - Nativo C2<br>
-            Inglês - Intermediário B2<br>
-            Espanhol - Iniciante A1<br>
-          </p>
-        </div>
-      </section>
-
-      <section id="portfolio">
-        <h2>Meu Portfólio</h2>
-
-        <div class="card">
-          <h3>Gerador de QR Code com Python:</h3>
-          <p>
-            Aplicação desenvolvida para criar QR Codes automaticamente a partir
-            de informações fornecidas pelo usuário, explorando automação e
-            manipulação de bibliotecas em Python.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Sistema de Consulta de Clima com OpenWeather API:</h3>
-          <p>
-            projeto integrado a uma API externa para buscar dados meteorológicos em tempo real,
-            permitindo consultar informações como temperatura, condições climáticas e previsões de diferentes localidades.
-          </p>
-        </div>
-
-        <div class="card">
-          <h3>Previsão de Preços de Casas com Regressão Linear:</h3>
-          <p>
-            modelo de Machine Learning desenvolvido para analisar dados imobiliários
-            e realizar previsões de valores de imóveis utilizando algoritmos de regressão,
-            demonstrando conceitos de análise de dados e aprendizado supervisionado.
-          </p>
-        </div>
-      </section>
-
-      <section id="contato">
-        <h2>Entre em contato</h2>
-
-        <form id="formulario">
-          <input type="text" id="nome" placeholder="Seu nome">
-          <input type="email" id="email" placeholder="Seu email">
-          <textarea id="mensagem" placeholder="Digite sua mensagem"></textarea>
-          <button type="submit">Enviar mensagem</button>
-        </form>
-      </section>
-    </main>
-
-    <footer>
-      <p>2026 Isabelle Silva - Portfólio</p>
-    </footer>
-
-    <script src="script.js"></script>
+      window.addEventListener('pointermove', (event) => {
+        root.style.setProperty('--cursor-x', `${event.clientX}px`);
+        root.style.setProperty('--cursor-y', `${event.clientY}px`);
+      });
+    </script>
   </body>
 </html>
