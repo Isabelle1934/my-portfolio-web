@@ -7,7 +7,19 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <section class="hero" aria-label="Banner inicial">
+    <header class="topbar">
+      <nav class="nav container" aria-label="Main navigation">
+        <a href="#home" class="logo">Engr.Isabelle</a>
+        <div class="nav-links">
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#social">Social Media</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+    </header>
+
+    <section id="home" class="hero" aria-label="Banner inicial">
       <div class="hero-overlay">
         <div class="hero-content">
           <p class="eyebrow"></p>
@@ -21,6 +33,144 @@
         </div>
       </div>
     </section>
+
+    <main>
+      <section id="about" class="section container">
+        <div class="section-heading">
+          <p class="section-label">About</p>
+          <h2>Turning ideas into meaningful digital experiences.</h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-card">
+            <p>
+              I build products and experiences that combine technical precision with creativity,
+              turning complexity into simple, useful solutions for real people.
+            </p>
+          </div>
+
+          <div class="about-card highlight">
+            <ul>
+              <li>Backend development</li>
+              <li>System architecture</li>
+              <li>AI-powered innovation</li>
+              <li>Problem solving</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section alt-section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-label">Projects</p>
+            <h2>Selected work and experiments.</h2>
+          </div>
+
+          <div class="projects-grid">
+            <article class="project-card">
+              <span class="project-tag">AI</span>
+              <h3>Smart Automation Platform</h3>
+              <p>
+                A workflow system designed to automate repetitive tasks and improve decision-making.
+              </p>
+            </article>
+
+            <article class="project-card">
+              <span class="project-tag">Web</span>
+              <h3>Portfolio Experience</h3>
+              <p>
+                A visual portfolio built to tell a stronger story through design, motion, and clarity.
+              </p>
+            </article>
+
+            <article class="project-card">
+              <span class="project-tag">Data</span>
+              <h3>Insights Dashboard</h3>
+              <p>
+                A dashboard that turns raw data into useful insights for teams and stakeholders.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="technologies" class="section alt-section">
+        <div class="container">
+          <div class="section-heading">
+            <p class="section-label">Technologies</p>
+            <h2>Tools and technologies.</h2>
+          </div>
+
+          <div class="tech-grid">
+            <div class="tech-item" title="Python">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python logo" />
+            </div>
+            <div class="tech-item" title="Java">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java logo" />
+            </div>
+            <div class="tech-item" title="HTML5">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5 logo" />
+            </div>
+            <div class="tech-item" title="CSS3">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3 logo" />
+            </div>
+            <div class="tech-item" title="JavaScript">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript logo" />
+            </div>
+            <div class="tech-item" title="Git">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git logo" />
+            </div>
+            <div class="tech-item" title="GitHub">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub logo" />
+            </div>
+            <div class="tech-item" title="VS Code">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" alt="VS Code logo" />
+            </div>
+            <div class="tech-item" title="Docker">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker logo" />
+            </div>
+            <div class="tech-item" title="SQL">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="SQL logo" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="social" class="section container">
+        <div class="section-heading">
+          <p class="section-label">Social Media</p>
+          <h2>Connect with me.</h2>
+        </div>
+
+        <div class="social-grid">
+          <a href="https://github.com/Isabelle1934" target="_blank" rel="noreferrer" class="social-card">
+            <span>GitHub</span>
+            <small>Code and experiments</small>
+          </a>
+
+          <a href="https://www.linkedin.com/in/isabelle-silva-64018b33b/" target="_blank" rel="noreferrer" class="social-card">
+            <span>LinkedIn</span>
+            <small>Career and updates</small>
+          </a>
+
+          <a href="https://www.instagram.com/eng.isabellels/" target="_blank" rel="noreferrer" class="social-card">
+            <span>Instagram</span>
+            <small>Creative process</small>
+          </a>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact-section">
+        <div class="container contact-box">
+          <div>
+            <p class="section-label">Contact</p>
+            <h2>Let’s build something meaningful.</h2>
+          </div>
+          <a href="mailto:isabellefls1910@gmail.com" class="contact-button">Send email</a>
+        </div>
+      </section>
+    </main>
 
     <script src="script.js"></script>
   </body>
