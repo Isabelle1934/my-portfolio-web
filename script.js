@@ -1,35 +1,47 @@
-// Alternar entre o tema claro e escuro
-const botaoTema = document.getElementById("tema");
+const root = document.body;
 
-botaoTema.addEventListener("click", () => {
-  document.body.classList.toggle("dark");
+window.addEventListener('pointermove', (event) => {
+  root.style.setProperty('--cursor-x', `${event.clientX}px`);
+  root.style.setProperty('--cursor-y', `${event.clientY}px`);
 });
 
-// Validação do formulário
-const formulario = document.getElementById("formulario");
+const phrases = [
+  'Turning ideas into innovation.',
+  'Creating solutions to real-world problems.',
+  'Technology that makes an impact.',
+  'Code, data, and intelligence.',
+  'Building the future with AI.'
+];
 
-formulario.addEventListener("submit", (evento) => {
-  evento.preventDefault();
+const roleText = document.querySelector('.role-text');
+let phraseIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
 
-  const nome = document.getElementById("nome").value;
-  const email = document.getElementById("email").value;
-  const mensagem = document.getElementById("mensagem").value;
+function typeLoop() {
+  const currentPhrase = phrases[phraseIndex];
 
-  // Verifica os campos vazios
-  if (nome === "" || email === "" || mensagem === "") {
-    alert("Preencha todos os campos!");
-    return;
+  if (!isDeleting) {
+    charIndex += 1;
+    roleText.textContent = currentPhrase.slice(0, charIndex);
+
+    if (charIndex === currentPhrase.length) {
+      isDeleting = true;
+      setTimeout(typeLoop, 1800);
+      return;
+    }
+  } else {
+    charIndex -= 1;
+    roleText.textContent = currentPhrase.slice(0, charIndex);
+
+    if (charIndex === 0) {
+      isDeleting = false;
+      phraseIndex = (phraseIndex + 1) % phrases.length;
+    }
   }
 
-  // Valida o e-mail
-  const formatoEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const speed = isDeleting ? 45 : 90;
+  setTimeout(typeLoop, speed);
+}
 
-  if (!formatoEmail.test(email)) {
-    alert("Digite um email válido!");
-    return;
-  }
-
-  // Simulação de envio
-  alert("Mensagem enviada com sucesso!");
-  formulario.reset();
-});
+typeLoop();
