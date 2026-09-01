@@ -12,22 +12,16 @@
         <div class="hero-content">
           <p class="eyebrow"></p>
           <h1>Hi, I'm Isabelle</h1>
-          <p class="role">Backend Developer &amp; Tech Creator</p>
+          <p class="role" aria-live="polite">
+            <span class="role-text"></span>
+          </p>
           <p class="description">
-            Backend Developer &amp; Tech Content Creator. Building modern web
-            experiences and sharing my journey with the dev community.
+            Building digital experiences with creativity, strategy, and real-world impact.
           </p>
         </div>
       </div>
     </section>
 
-    <script>
-      const root = document.body;
-
-      window.addEventListener('pointermove', (event) => {
-        root.style.setProperty('--cursor-x', `${event.clientX}px`);
-        root.style.setProperty('--cursor-y', `${event.clientY}px`);
-      });
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
