@@ -205,6 +205,21 @@ body:hover::after {
   margin-bottom: 12px;
   opacity: 0;
   animation: fadeUp 1s ease 0.5s forwards;
+  min-height: 2.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.role-text {
+  display: inline-block;
+  min-height: 1.5em;
+  white-space: nowrap;
+  color: #f5eaff;
+  text-shadow: 0 0 18px rgba(191, 140, 255, 0.4);
+  border-right: 2px solid rgba(255, 255, 255, 0.8);
+  padding-right: 6px;
+  animation: caretBlink 0.8s step-end infinite;
 }
 
 .description {
@@ -215,6 +230,15 @@ body:hover::after {
   margin: 0 auto;
   opacity: 0;
   animation: fadeUp 1s ease 0.8s forwards;
+}
+
+@keyframes caretBlink {
+  0%, 50% {
+    border-color: rgba(255, 255, 255, 0.9);
+  }
+  50.01%, 100% {
+    border-color: transparent;
+  }
 }
 
 @keyframes fadeUp {
